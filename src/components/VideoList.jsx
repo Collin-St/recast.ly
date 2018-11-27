@@ -1,4 +1,4 @@
-import exampleVideoData from './src/data/exampleVideoData.js';
+import exampleVideoData from "./src/components/exampleVideoData"
 
 var VideoList = () => (
   <div className="video-list">
@@ -10,6 +10,10 @@ var VideoList = () => (
   </div>
 );
 
+ReactDOM.render(
+  <VideoList />,
+  document.getElementById('app')
+);
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
 VideoList.propTypes = {
