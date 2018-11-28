@@ -1,15 +1,16 @@
 import VideoListEntry from './VideoListEntry.js'
 
-var VideoList = (props) => {
-  return (
+var VideoList = ({videos, onTitleClick}) => (
+  // return (
     <div className="video-list">
-      {props.videos.map((video, i) => (
-        <VideoListEntry video={props.videos[i]}/>
-        ))}
+      {videos.map((video) => 
+        <VideoListEntry 
+        video={video} 
+        onTitleClick={onTitleClick}/>
+        )}
     </div>
-  )
-  
-}
+  // )
+);
 
 // var VideoList = () => (
 //   <div className="video-list">
